@@ -1,0 +1,45 @@
+header {
+  position: relative;
+  background-image: url("../images/mika-baumeister-Wpnoqo2plFA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #111111;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  background-color: #111111;
+  opacity: 0.8;
+  filter: blur(9px); /* Aplica el efecto de desenfoque */
+  z-index: -1; /* Coloca la capa oscura y borrosa debajo del contenido */
+}
+
+.carouselslideimage {
+    width: 100%; /* Ancho deseado */
+    height: 500px; /* Alto deseado */
+    overflow: hidden; /* Esconde las partes fuera del área recortada */
+}
+.carouselslideimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+    object-position: center; /* Centra la imagen */
+}
